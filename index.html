@@ -3,66 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scott Motte (Mot)</title>
+  <title>Scott Motte – Mot</title>
   <style>
     body {
       display: flex;
       justify-content: center; /* Centers the content */
       padding: 20px;
-      font-family: "Times New Roman", serif; /* Classic serif font */
-      font-size: 17px;
-      line-height: 1.6;
-      color: #555; /* Darker text for a refined look */
+      font-family: "IBM Plex Mono", Menlo, monospace;
+      font-size: 13px;
+      line-height: 2;
+      background: #fafafa;
+      color: #666;
     }
 
     article {
       max-width: 560px;
-      width: 100%; /* Allows it to shrink on smaller screens */
-      text-align: left;
+      width: 100%; /* shrink on smaller screens */
+      text-align: justify;
+    }
+
+    a {
+      color: blue;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     h1 {
       margin: 128px 0 0 0;
-      font-size: 18px;
-      color: #111;
+      font-size: 14px;
+      color: #09090B;
     }
 
     img {
       width: 100%; /* Makes the image responsive */
       max-width: 560px; /* Ensures it doesn’t exceed the container */
       height: auto; /* Keeps the aspect ratio */
-      margin: 64px 0 64px 0;
+      margin: 32px 0 32px 0;
     }
 
     p {
+      margin-top: 1.4em;
+      margin-bottom: 1.4em;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    p.description {
       margin-top: 0;
     }
 
     @media (prefers-color-scheme: dark) {
       body {
-        background: #111; /* Dark background */
-        color: #ccc; /* Light text */
+        background: #09090B;
+        color: #ccc;
       }
 
       h1 {
-        color: #fff;
+        color: #fafafa;
+      }
+
+      a {
+        color: #ecd53f;
       }
     }
   </style>
 </head>
 <body>
   <article>
-    <h1>Scott Motte (Mot)</h1>
+    <h1>Scott Motte <em>– Mot</em></h1>
 
-    <p>Software Creative, in Los Angeles</p>
+    <p class="description">Software Creative, in Los Angeles</p>
 
-    <p>Currently making <strong><a href="https://dotenvx.com">dotenvx</a></strong>, a modern secrets management platform. Previously, he created <strong><a href="https://github.com/motdotla/dotenv">dotenv</a></strong>, the widely-used open-source tool for managing environment variables. His work has shaped developer tooling and infrastructure worldwide.</p>
+    <p>Currently making <a href="https://dotenvx.com">dotenvx</a>, a modern secrets management platform. Previously, he created <a href="https://github.com/motdotla/dotenv">dotenv</a>, the widely-used open-source tool for managing environment variables. His work has shaped developer tooling and infrastructure worldwide.</p>
 
     <p>He specializes in developer experience, security, and tooling – blending engineering with design to build tools that developers love.</p>
 
-    <p>He's known as <strong>Mot</strong> online and in the open-source world.</p>
+    <p>He's known as <em>Mot</em> – online and in open-source.</p>
 
     <img src="./mot.jpg" alt="Scott Motte (Mot)" />
+
+    <!--<svg class="" role="img" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g><path fill="#000" d="M0 0h200v200H0z"></path><path fill="#ECD53F" d="M31 164h14v14H31z"></path><g fill="#ECD53F" fill-rule="nonzero"><path d="M91.986 178.41v-7.75H66.288v-12.52h23.094v-7.75H66.288v-10.198h24.82v-7.782H57v46zM108.585 178.41v-29.997l18.545 29.997h9.319v-46h-8.63v30.72l-18.826-30.72h-9.037v46zM167.92 178.41l16.474-46h-9.852l-11.265 34.045-11.641-34.045h-10.073l16.44246z"></path></g></g></svg>-->
+
+    <p><a href="https://www.youtube.com/watch?v=MC08iCoSuBw">Dotenv, 2014.</a></p>
+    <p><a href="https://www.youtube.com/watch?v=JZsN4XXT9Xc">Deprecating the Password, 2016.</a></p>
+    <p><a href="https://patentimages.storage.googleapis.com/46/0a/15/2e6eb1a03028c1/US11757819.pdf">United States Patent #11757819B2, 2017.</a></p>
+    <p><a href="https://dotenvx.com/dotenvx.pdf">Dotenvx: Reducing Secrets Risk with Cryptographic Separation, 2025.</a></p>
   </article>
 </body>
 </html>
