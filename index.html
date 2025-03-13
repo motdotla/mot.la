@@ -23,9 +23,7 @@
 
     h1 {
       margin: 128px 0 0 0;
-      font-family: "Times New Roman", serif;
       font-size: 18px;
-      font-weight: normal;
       color: #111;
     }
 
@@ -39,6 +37,17 @@
     p {
       margin-top: 0;
     }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #111; /* Dark background */
+        color: #ccc; /* Light text */
+      }
+
+      h1 {
+        color: #fff;
+      }
+    }
   </style>
 </head>
 <body>
@@ -49,9 +58,9 @@
 
     <p>Currently making <strong><a href="https://dotenvx.com">dotenvx</a></strong>, a modern secrets management platform. Previously, he created <strong><a href="https://github.com/motdotla/dotenv">dotenv</a></strong>, the widely-used open-source tool for managing environment variables. His work has shaped developer tooling and infrastructure worldwide.</p>
 
-    <p>He specializes in developer experience, security, and tooling, blending engineering with design to build tools that developers love.</p>
+    <p>He specializes in developer experience, security, and tooling – blending engineering with design to build tools that developers love.</p>
 
-    <p>He's known as <strong>Mot</strong> – online and in the open-source world.</p>
+    <p>He's known as <strong>Mot</strong> online and in the open-source world.</p>
 
     <img src="./mot.jpg" alt="Scott Motte (Mot)" />
   </article>
