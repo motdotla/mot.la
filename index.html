@@ -15,44 +15,69 @@
   <meta name="twitter:image" content="https://mot.la/mot.jpg">
   <script defer src="https://1.dotenvx.com/script.js" data-website-id="3d184619-5fb1-4be7-b9b5-cbf45503e1c8"></script>
   <style>
+    html {
+      color-scheme: light;
+      background: #fafafa;
+    }
+
     body {
       display: flex;
-      justify-content: center; /* Centers the content */
+      flex-direction: column;
+      min-height: 100vh;
+      min-height: 100svh;
+      box-sizing: border-box;
+      margin: 0;
       padding: 20px;
-      font-family: "IBM Plex Mono", Menlo, monospace;
-      font-size: 13px;
-      line-height: 1.9;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
       background: #fafafa;
       color: #666;
     }
 
     article {
+      margin: auto;
+      flex-shrink: 0;
       max-width: 560px;
       width: 100%; /* shrink on smaller screens */
-      text-align: justify;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
     }
 
     a {
-      color: blue;
-      font-weight: bold;
-      text-decoration: none;
+      color: #27272a;
+      font-weight: inherit;
+      text-decoration: underline;
+      text-decoration-color: #d4d4d8;
+      text-underline-offset: 3px;
     }
 
     a:hover {
-      text-decoration: underline;
+      text-decoration-color: currentColor;
+    }
+
+    .intro {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      text-align: left;
     }
 
     h1 {
-      margin: 128px 0 0 0;
-      font-size: 14px;
+      margin: 0;
+      font-size: 20px;
       color: #09090B;
     }
 
-    img {
-      width: 100%; /* Makes the image responsive */
-      max-width: 560px; /* Ensures it doesn’t exceed the container */
-      height: auto; /* Keeps the aspect ratio */
-      margin: 32px 0 32px 0;
+    .portrait {
+      flex: 0 0 72px;
+      width: 72px;
+      max-width: 35%;
+      height: auto;
+      margin: 0;
     }
 
     p {
@@ -62,46 +87,60 @@
       margin-right: 0;
     }
 
-    p.description {
+    section > p:first-child {
       margin-top: 0;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        margin: 64px 0 0 0;
-      }
+    section > p:last-child {
+      margin-bottom: 0;
     }
 
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #09090B;
-        color: #ccc;
-      }
-
-      h1 {
-        color: #fafafa;
-      }
-
-      a {
-        color: #ecd53f;
-      }
+    p.description {
+      margin: 0;
     }
+
+    .work-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: inherit;
+      text-align: left;
+    }
+
+    .work-list small {
+      font-size: inherit;
+    }
+
+    .work-list li + li {
+      margin-top: 10px;
+    }
+
   </style>
 </head>
 <body>
   <article>
-    <h1>Scott Motte</h1>
-    <p class="description">Software Creative, in Los Angeles 🌴</p>
-    <p>Currently making <a href="https://dotenvx.com">dotenvx</a>, a modern take on developer secrets. Previously, I created <a href="https://github.com/motdotla/dotenv">dotenv</a>, the widely-used open-source tool for managing environment variables. My work has helped shape developer tooling and infrastructure worldwide.</p>
-    <p>I specialize in developer experience, security, and tooling, blending engineering with design to create tools developers love.</p>
-    <img src="./mot.jpg" alt="Scott Motte" />
-    <p><a href="https://github.com/motdotla/dotenv">Dotenv, 2014.</a><small>(<a href="https://www.youtube.com/watch?v=MC08iCoSuBw">See presentation</a>)</small></p>
-    <p><a href="https://speakerdeck.com/motdotla/human-first-api-design">Human First API Design, 2014.</a></p>
-    <p><a href="https://speakerdeck.com/motdotla/deprecating-the-password-an-alternative-approach-to-authentication-using-email-only?slide=3">Deprecating the Password, 2014.</a> <small>(<a href="https://www.youtube.com/watch?v=JZsN4XXT9Xc">See presentation</a>)</small></p>
-    <p><a href="https://github.com/hackclub/hcb/graphs/contributors">Hack Club Bank, 2020-2021.</a></p>
-    <p><a href="https://patentimages.storage.googleapis.com/86/58/b8/6026c448e0d1a7/US10951569.pdf">US Patent #10,951,569 B2, 2021.</a></p>
-    <p><a href="https://dotenvx.com/whitepaper.pdf">Dotenvx: Reducing Secrets Risk with Cryptographic Separation, 2025.</a> <small>(<a href="https://dotenvx.com">Visit site</a>)</small></p>
-    <p><a href="https://keysee.io/whitepaper.pdf">KEYSEE⎔: Deterministic Visual Identity for Public Keys, 2026.</a> <small>(<a href="https://keysee.io">Visit site</a>)</small></p>
+    <header class="intro">
+      <div>
+        <h1>Scott Motte</h1>
+        <p class="description">Software Creative, in Los Angeles 🌴</p>
+      </div>
+      <img class="portrait" src="./mot.jpg" alt="Scott Motte" />
+    </header>
+    <section aria-label="About">
+      <p>I’m building <a href="https://dotenvx.com">Dotenvx</a>, a tool for encrypting .env files. I also created <a href="https://github.com/motdotla/dotenv">Dotenv</a>, an open-source tool for loading environment variables.</p>
+      <p>I like working where security and design meet.</p>
+    </section>
+    <section aria-label="Projects and publications">
+      <ul class="work-list">
+        <li><a href="https://github.com/motdotla/dotenv">Dotenv, 2014.</a><small>(<a href="https://www.youtube.com/watch?v=MC08iCoSuBw">See presentation</a>)</small></li>
+        <li><a href="https://speakerdeck.com/motdotla/human-first-api-design">Human First API Design, 2014.</a></li>
+        <li><a href="https://speakerdeck.com/motdotla/deprecating-the-password-an-alternative-approach-to-authentication-using-email-only?slide=3">Deprecating the Password, 2014.</a> <small>(<a href="https://www.youtube.com/watch?v=JZsN4XXT9Xc">See presentation</a>)</small></li>
+        <li><a href="https://github.com/hackclub/hcb/graphs/contributors">Hack Club Bank, 2020-2021.</a></li>
+        <li><a href="https://patentimages.storage.googleapis.com/86/58/b8/6026c448e0d1a7/US10951569.pdf">US Patent #10,951,569 B2, 2021.</a></li>
+        <li><a href="https://dotenvx.com/whitepaper.pdf">Dotenvx: Reducing Secrets Risk with Cryptographic Separation, 2025.</a> <small>(<a href="https://dotenvx.com">Visit site</a>)</small></li>
+        <li><a href="https://keysee.io/whitepaper.pdf">KEYSEE⎔: Deterministic Visual Identity for Public Keys, 2026.</a> <small>(<a href="https://keysee.io">Visit site</a>)</small></li>
+      </ul>
+    </section>
   </article>
 
   <audio id="bg-audio" src="./091909.mp3"></audio>
