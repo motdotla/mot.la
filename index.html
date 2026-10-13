@@ -72,12 +72,17 @@
       color: #09090B;
     }
 
-    .portrait {
+    .portrait-link {
       flex: 0 0 72px;
       width: 72px;
       max-width: 35%;
-      height: auto;
       margin: 0;
+    }
+
+    .portrait {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     p {
@@ -124,7 +129,9 @@
         <h1>Scott Motte</h1>
         <p class="description">Software Creative, in Los Angeles 🌴</p>
       </div>
-      <img class="portrait" src="./mot.jpg" alt="Scott Motte" />
+      <a class="portrait-link" href="https://github.com/motdotla" aria-label="Scott Motte on GitHub">
+        <img class="portrait" src="./mot.jpg" alt="Scott Motte" />
+      </a>
     </header>
     <section aria-label="About">
       <p>I’m building <a href="https://dotenvx.com">Dotenvx</a>, a tool for encrypting .env files. I also created <a href="https://github.com/motdotla/dotenv">Dotenv</a>, an open-source tool for loading environment variables.</p>
